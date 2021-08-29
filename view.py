@@ -1,8 +1,5 @@
 import requests
-from main import app, test_function
+from main import app
 
 
 print(app)
-
-
-test_function('Страдаем фигней')

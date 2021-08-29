@@ -27,5 +27,14 @@ def show_persons():
     Users.select().show()
 
 
-add_person()
-show_persons()
+while True:
+    print("Initialization...")
+    print('Print "stop" to terminate the program')
+    command = input("Waiting for your commands, Captain: ")
+    if command == 'show':
+        show_persons()
+    elif command == 'add':
+        add_person()
+    elif command == 'stop':
+        print("Shut down program")
+        break

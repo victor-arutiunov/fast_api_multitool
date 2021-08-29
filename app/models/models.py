@@ -3,7 +3,7 @@ from pony.orm import *
 db = Database()
 
 db.bind(provider='postgres', user='test_user',
-        password='0000', host='', database='fast_api')
+        password='0000', host='', database='fast_api_multitool_db')
 
 
 class Users(db.Entity):

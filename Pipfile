@@ -4,6 +4,12 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+Pipfile = "*"
+requests = "*"
+fastapi = "*"
+hypercorn = "*"
+pony = "*"
+psycopg2 = "*"
 
 [dev-packages]
 

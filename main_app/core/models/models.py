@@ -27,14 +27,35 @@ def show_persons():
     Users.select().show()
 
 
+class Bcolors:
+    '''
+    Colors set
+    '''
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+
+INITIAL = True
+
 while True:
-    print("Initialization...")
-    print('Print "stop" to terminate the program')
-    command = input("Waiting for your commands, Captain: ")
+    if INITIAL:
+        print(Bcolors.OKGREEN + "Initialization...")
+        print(Bcolors.OKGREEN + 'Print "stop" to terminate the program')
+        INITIAL = False
+    command = input(Bcolors.HEADER + "Waiting for your commands, Captain: ")
     if command == 'show':
         show_persons()
     elif command == 'add':
         add_person()
     elif command == 'stop':
-        print("Shut down program")
+        print(Bcolors.WARNING + "Shut down program")
         break
+    else:
+        print(Bcolors.WARNING + "Wrong command")
